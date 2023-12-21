@@ -1,10 +1,12 @@
-# Notes
+.statContainer {
+}
 
-Breakpoints: Desktop over 1024px, Tablet over 375px. Mobile 375px and under.
+.statLabel {
+}
 
-768px
+.statValue {
+}
 
-```css
 @media screen and (min-width: 1025px) {
 }
 
@@ -13,4 +15,3 @@ Breakpoints: Desktop over 1024px, Tablet over 375px. Mobile 375px and under.
 
 @media screen and (max-width: 375px) {
 }
-```

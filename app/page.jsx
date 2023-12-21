@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import BigButton from "./components/BigButton";
+import BigButton from "./components/button/BigButton";
 // import Image from "next/image";
 import Header from "./components/header/Header";
 import { bellefair } from "./fonts";

@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 const navItems = [
   { number: "00", text: "HOME", relativeURL: "/" },
   { number: "01", text: "DESTINATION", relativeURL: "/destination/Moon" },
-  { number: "02", text: "CREW", relativeURL: "/crew/mark-shuttleworth" },
+  { number: "02", text: "CREW", relativeURL: "/crew/douglas-hurley" },
   {
     number: "03",
     text: "TECHNOLOGY",

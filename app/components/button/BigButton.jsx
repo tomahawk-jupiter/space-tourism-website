@@ -1,6 +1,6 @@
-import { bellefair } from "../fonts";
+import { bellefair } from "../../fonts";
 import styles from "./bigButton.module.css";
-import H4 from "./typography/H4";
+import H4 from "../typography/H4";
 
 const BigButton = () => {
   return (

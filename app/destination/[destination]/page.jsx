@@ -1,9 +1,19 @@
+import Header from "@/app/components/header/Header";
+import styles from "./page.module.css";
+import PageTitle from "@/app/components/pageTitle/PageTitle";
+import Image from "next/image";
+import H1 from "@/app/components/typography/H1";
+import P from "@/app/components/typography/P";
+import PlanetStat from "./components/PlanetStat";
+import Link from "next/link";
+import PlanetNavbar from "./components/PlanetNavbar";
+
 const destinations = [
   {
     name: "Moon",
     images: {
-      png: "./assets/destination/image-moon.png",
-      webp: "./assets/destination/image-moon.webp",
+      png: "/assets/destination/image-moon.png",
+      webp: "/assets/destination/image-moon.webp",
     },
     description:
       "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
@@ -13,8 +23,8 @@ const destinations = [
   {
     name: "Mars",
     images: {
-      png: "./assets/destination/image-mars.png",
-      webp: "./assets/destination/image-mars.webp",
+      png: "/assets/destination/image-mars.png",
+      webp: "/assets/destination/image-mars.webp",
     },
     description:
       "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
@@ -24,8 +34,8 @@ const destinations = [
   {
     name: "Europa",
     images: {
-      png: "./assets/destination/image-europa.png",
-      webp: "./assets/destination/image-europa.webp",
+      png: "/assets/destination/image-europa.png",
+      webp: "/assets/destination/image-europa.webp",
     },
     description:
       "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.",
@@ -35,8 +45,8 @@ const destinations = [
   {
     name: "Titan",
     images: {
-      png: "./assets/destination/image-titan.png",
-      webp: "./assets/destination/image-titan.webp",
+      png: "/assets/destination/image-titan.png",
+      webp: "/assets/destination/image-titan.webp",
     },
     description:
       "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
@@ -49,10 +59,30 @@ const Destinations = ({ params }) => {
   const destination = destinations.find((d) => d.name === params.destination);
 
   return (
-    <>
-      <div>{destination.name}</div>
-      <div>{destination.description}</div>
-    </>
+    <main className={styles.page}>
+      <div className={styles.widthLimit}>
+        <Header />
+        <PageTitle number="01" text="PICK YOUR DESTINATION" />
+        <div className={styles.planetImageContainer}>
+          <Image
+            className={styles.planetImage}
+            width={170}
+            height={170}
+            src={destination.images.png}
+          />
+        </div>
+
+        <PlanetNavbar />
+
+        <H1>{destination.name.toLocaleUpperCase()}</H1>
+        <P>{destination.description}</P>
+
+        <div className={styles.lineDecoration}></div>
+
+        <PlanetStat label="AVG. DISTANCE" value={destination.distance} />
+        <PlanetStat label="EST. TRAVEL TIME" value={destination.travel} />
+      </div>
+    </main>
   );
 };
 

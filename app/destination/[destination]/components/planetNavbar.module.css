@@ -1,0 +1,82 @@
+.navbarAndLineDecorationContainer {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  backdrop-filter: blur(24px);
+  background-color: #ffffff05;
+  padding-left: 3em;
+}
+
+.ul {
+  display: flex;
+  justify-content: center;
+  margin-left: 3rem;
+}
+
+.navItem {
+  margin-right: 3em;
+  padding: 1em 0;
+  font-size: 16px;
+}
+
+.active {
+  border-bottom: solid white;
+}
+
+.notActive:hover {
+  border-bottom: solid #fff8;
+}
+.navItemNumber {
+  letter-spacing: 2.7px;
+  font-weight: bold;
+  color: white;
+  margin-right: 0.5em;
+  display: none;
+}
+.navItemText {
+  letter-spacing: 2.7px;
+  color: white;
+}
+
+.horizontalLine {
+  width: 473px;
+  height: 1px;
+  background-color: #979797;
+  position: relative;
+  right: -40px;
+  display: none;
+  z-index: 1;
+  background-color: #fff3;
+}
+
+@media screen and (min-width: 1190px) {
+  .horizontalLine {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar {
+    padding: 0 8em;
+  }
+  .navItemNumber {
+    display: inline-block;
+  }
+  .navItemNumber {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+}
+
+@media screen and (min-width: 376px) and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 375px) {
+  .navItem {
+    font-size: 14px;
+  }
+}
