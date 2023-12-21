@@ -1,0 +1,75 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-left: 55px;
+}
+
+.navbarAndLineDecorationContainer {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  backdrop-filter: blur(24px);
+  background-color: #ffffff05;
+  padding: 0 8em;
+}
+
+.ul {
+  display: flex;
+}
+
+.navItem {
+  margin-right: 3em;
+  padding: 38px 0;
+}
+
+.active {
+  border-bottom: solid white;
+}
+
+.notActive:hover {
+  border-bottom: solid #fff8;
+}
+.navItemNumber {
+  font-size: 16px;
+  letter-spacing: 2.7;
+  font-weight: bold;
+  color: white;
+  margin-right: 0.5em;
+}
+.navItemText {
+  font-size: 16px;
+  letter-spacing: 2.7;
+  color: white;
+}
+
+.horizontalLine {
+  width: 473px;
+  height: 1px;
+  background-color: #979797;
+  position: relative;
+  right: -40px;
+  display: none;
+  z-index: 1;
+  background-color: #fff3;
+}
+
+@media screen and (min-width: 1025px) {
+  .header {
+    padding-top: 40px;
+  }
+  .horizontalLine {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 375px) {
+}

@@ -1,12 +1,12 @@
-import Image from "next/image";
 import styles from "./page.module.css";
-import Header from "./components/Header";
 import BigButton from "./components/BigButton";
+// import Image from "next/image";
+import Header from "./components/header/Header";
 
 export default function Home() {
   return (
-    <main>
-      {/* <Header /> */}
+    <main className={styles.page}>
+      <Header />
       <div>
         <div>
           <h5>SO, YOU WANT TO TRAVEL TO</h5>
