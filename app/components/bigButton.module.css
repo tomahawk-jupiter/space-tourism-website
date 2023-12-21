@@ -1,3 +1,8 @@
+.h4 {
+  font-size: 32px;
+  color: black;
+}
+
 .bigButton {
   width: 274px;
   height: 274px;
@@ -20,18 +25,24 @@
   background-color: #ffffff0a;
 }
 
-/* @media (max-width: 768px) {
- .bigButton {
-    width: 242px;
-    height: 242px;
-    font-size: 32px;
-  }
+@media screen and (min-width: 1025px) {
 }
 
-@media (max-width: 375px) {
-.bigButton {
+@media screen and (min-width: 376px) and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 375px) {
+  .bigButton {
     width: 150px;
     height: 150px;
+  }
+
+  .bigButtonOuter {
+    width: 275px;
+    height: 275px;
+  }
+
+  .h4 {
     font-size: 20px;
   }
-} */
+}

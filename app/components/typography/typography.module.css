@@ -1,0 +1,69 @@
+.subHeadingOne {
+  font-size: 28px;
+}
+
+.subHeadingTwo {
+  font-size: 14px;
+  letter-spacing: 2.35px;
+}
+
+.h1 {
+  font-size: 150px;
+  color: white;
+  margin-top: 2rem;
+}
+.h2 {
+  font-size: 100px;
+  color: white;
+}
+
+.h3 {
+  font-size: 56px;
+  color: white;
+}
+
+.h4 {
+  font-size: 32px;
+  color: white;
+}
+
+.h5 {
+  font-size: 28px;
+  letter-spacing: 4.75px;
+  color: var(--pale-blue);
+}
+
+.p {
+  font-size: 18px;
+  color: white;
+  line-height: 2;
+  color: var(--pale-blue);
+}
+
+/* @media screen and (max-width: 1024px) {
+  .p {
+    font-size: 16px;
+  }
+} */
+
+@media screen and (min-width: 1025px) {
+}
+
+@media screen and (min-width: 376px) and (max-width: 1024px) {
+  .p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .h1 {
+    font-size: 80px;
+  }
+  .h5 {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
+  .p {
+    font-size: 15px;
+  }
+}

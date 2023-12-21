@@ -14,29 +14,7 @@ h3,
 h4,
 h5 {
   margin: 0;
-}
-h1 {
-  font-size: 150px;
-}
-h2 {
-  font-size: 100px;
-}
-
-h2 {
-  font-size: 56px;
-}
-
-h4 {
-  font-size: 32px;
-}
-h5 {
-  font-size: 28px;
-  letter-spacing: 4.75;
-  color: var(--pale-blue);
-}
-
-p {
-  font-size: 18px;
+  font-weight: normal;
 }
 
 ul {
@@ -49,10 +27,7 @@ a {
   text-decoration: none;
 }
 
-/* "16px",
-"14px",
-},
-letterSpacing: {
-475: "4.75px",
-235: "2.35px",
-270: "2.7px", */
+button {
+  border: none;
+  background-color: transparent;
+}

@@ -1,0 +1,32 @@
+.menuPopover {
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 200px;
+  height: 100vh;
+  backdrop-filter: blur(24px);
+  background-color: #ffffff05;
+  padding: 2rem;
+}
+
+.closeIconContainer {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 4rem;
+}
+
+.navItem {
+  padding: 1em 0;
+}
+.navItemNumber {
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  font-weight: bold;
+  color: white;
+  margin-right: 0.5em;
+}
+.navItemText {
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  color: #fffd;
+}
