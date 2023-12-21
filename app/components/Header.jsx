@@ -6,8 +6,12 @@ import Link from "next/link";
 const navItems = [
   { number: "00", text: "HOME", relativeURL: "/" },
   { number: "01", text: "DESTINATION", relativeURL: "/destination/Moon" },
-  { number: "02", text: "CREW", relativeURL: "/crew" },
-  { number: "03", text: "TECHNOLOGY", relativeURL: "/technology" },
+  { number: "02", text: "CREW", relativeURL: "/crew/mark-shuttleworth" },
+  {
+    number: "03",
+    text: "TECHNOLOGY",
+    relativeURL: "/technology/launch-vehicle",
+  },
 ];
 
 const Header = () => {
