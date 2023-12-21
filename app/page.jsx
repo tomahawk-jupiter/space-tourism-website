@@ -6,7 +6,7 @@ import BigButton from "./components/BigButton";
 export default function Home() {
   return (
     <main>
-      <Header />
+      {/* <Header /> */}
       <div>
         <div>
           <h5>SO, YOU WANT TO TRAVEL TO</h5>

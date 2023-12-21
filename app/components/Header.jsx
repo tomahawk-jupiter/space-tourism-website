@@ -1,7 +1,9 @@
+"use client";
 import Logo from "./Logo";
 import { barlowCondensed } from "../fonts";
 import styles from "./header.module.css";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { number: "00", text: "HOME", relativeURL: "/" },
@@ -16,27 +18,34 @@ const navItems = [
 
 const Header = () => {
   return (
-    <header>
+    <header className={styles.header}>
       <Logo />
       <div className={styles.horizontalLine}></div>
       <nav>
-        <ul>
+        <ul className={styles.ul}>
           {navItems.map((item) => {
             return (
-              <Link key={item.text} href={item.relativeURL}>
-                <li>
+              <li
+                key={item.text}
+                className={`${styles.navItem} ${
+                  usePathname() === item.relativeURL
+                    ? styles.active
+                    : styles.notActive
+                }`}
+              >
+                <Link href={item.relativeURL}>
                   <span
                     className={`${barlowCondensed.className} ${styles.navItemNumber}`}
                   >
-                    {item.number}{" "}
+                    {item.number}
                   </span>
                   <span
                     className={`${barlowCondensed.className} ${styles.navItemText}`}
                   >
                     {item.text}
                   </span>
-                </li>
-              </Link>
+                </Link>
+              </li>
             );
           })}
         </ul>
