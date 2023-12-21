@@ -1,0 +1,36 @@
+.bigButton {
+  width: 274px;
+  height: 274px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.bigButtonOuter {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bigButtonOuter:hover {
+  background-color: #ffffff0a;
+}
+
+/* @media (max-width: 768px) {
+ .bigButton {
+    width: 242px;
+    height: 242px;
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 375px) {
+.bigButton {
+    width: 150px;
+    height: 150px;
+    font-size: 20px;
+  }
+} */
