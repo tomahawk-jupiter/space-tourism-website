@@ -13,6 +13,28 @@
 
 @media screen and (min-width: 1025px) {
   .titleContainer {
+    font-size: 28px;
+    margin-bottom: 6rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .titleContainer {
+    justify-content: flex-start;
+    margin-left: 8rem;
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+  .titleContainer {
+    justify-content: flex-start;
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .titleContainer {
   }
 
   .titleNumber {
@@ -33,9 +55,11 @@
   }
 }
 
-@media screen and (min-width: 376px) and (max-width: 1024px) {
-  .titleContainer {
-  }
+@media screen and (min-width: 376px) and (max-width: 700px) {
+  /* .titleContainer {
+    justify-content: flex-start;
+    margin-left: 2rem;
+  } */
 
   .titleNumber {
   }

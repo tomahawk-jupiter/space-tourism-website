@@ -21,11 +21,23 @@
   width: 450px;
 }
 
+.h1 {
+  font-size: 150px;
+  color: white;
+  margin-top: 2rem;
+}
+
+.h5 {
+  font-size: 28px;
+  letter-spacing: 4.75px;
+  color: var(--pale-blue);
+}
+
 @media screen and (min-width: 1025px) {
   .pageContent {
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 200px;
+    margin-top: 100px;
   }
 
   .leftContent {
@@ -33,7 +45,7 @@
   }
   .rightContent {
     margin-right: 50px;
-    margin-top: 100px;
+    /* margin-top: 100px; */
   }
 }
 
@@ -41,14 +53,27 @@
   .leftContent {
     text-align: center;
   }
+  .pageContent {
+    margin-top: 8rem;
+  }
 }
 
-@media screen and (min-width: 376px) and (max-width: 1024px) {
+@media screen and (min-width: 376px) and (max-width: 767px) {
   .page {
     background-image: url("/assets/home/background-home-tablet.jpg");
   }
   .pageContent {
-    margin-top: 150px;
+    margin-top: 6rem;
+  }
+  .leftContent {
+    width: 327px;
+  }
+  .h1 {
+    font-size: 80px;
+  }
+  .h5 {
+    font-size: 16px;
+    letter-spacing: 2.7px;
   }
 }
 
@@ -60,6 +85,13 @@
     width: 327px;
   }
   .pageContent {
-    margin-top: 50px;
+    margin-top: 2rem;
+  }
+  .h1 {
+    font-size: 80px;
+  }
+  .h5 {
+    font-size: 16px;
+    letter-spacing: 2.7px;
   }
 }

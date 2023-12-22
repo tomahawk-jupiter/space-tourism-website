@@ -28,7 +28,7 @@
 @media screen and (min-width: 1025px) {
 }
 
-@media screen and (min-width: 376px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .bigButton {
     width: 242px;
     height: 242px;
@@ -40,15 +40,16 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+/* @media screen and (max-width: 375px) { */
+@media screen and (max-width: 767px) {
   .bigButton {
     width: 150px;
     height: 150px;
   }
 
   .bigButtonOuter {
-    width: 275px;
-    height: 275px;
+    width: 250px;
+    height: 250px;
   }
 
   .h4 {

@@ -14,7 +14,7 @@ const navItems = [
 const PlanetNavbar = () => {
   console.log({ pathname: usePathname() });
   return (
-    <nav className={styles}>
+    <nav>
       <ul className={styles.ul}>
         {navItems.map((item) => {
           return (

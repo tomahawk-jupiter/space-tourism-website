@@ -37,25 +37,47 @@
   background-color: #383b4b7a;
   margin: 2rem 0;
 }
+
+@media screen and (min-width: 768px) {
+  .planetImage {
+    width: 300px;
+    height: 300px;
+  }
+  .planetStatsContainer {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .planetName {
+    font-size: 80px;
+    margin-top: 2rem;
+  }
+}
+
 @media screen and (min-width: 1025px) {
   .pageContent {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 200px;
   }
-
-  .leftContent {
-    margin-left: 165px;
-  }
-  .rightContent {
-    margin-right: 50px;
-    margin-top: 100px;
-  }
 }
 
-@media screen and (max-width: 1024px) {
-  .leftContent {
-    text-align: center;
+@media screen and (min-width: 1025px) {
+  .pageContentContainer {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .planetImage {
+    width: 445px;
+    height: 445px;
+  }
+  .rightContentContainer {
+    max-width: 445px;
+    margin-top: -6rem;
+  }
+  .planetStatsContainer {
+    justify-content: flex-start;
+    gap: 130px;
   }
 }
 
@@ -67,17 +89,15 @@
   .pageContent {
     margin-top: 150px;
   }
+  .pageContentContainer {
+    max-width: 573px;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 375px) {
   .page {
     background-image: url("/assets/destination/background-destination-mobile.jpg");
     text-align: center;
-  }
-  .leftContent {
-    width: 327px;
-  }
-  .pageContent {
-    margin-top: 50px;
   }
 }
