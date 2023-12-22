@@ -1,8 +1,12 @@
+"use client";
 import styles from "./page.module.css";
 import Header from "@/app/components/header/Header";
 import PageTitle from "@/app/components/pageTitle/PageTitle";
+import P from "@/app/components/typography/P";
 import Image from "next/image";
 import Link from "next/link";
+import { bellefair } from "@/app/fonts";
+import { usePathname } from "next/navigation";
 
 const crew = [
   {
@@ -56,26 +60,40 @@ const Crew = ({ params }) => {
     <main className={styles.page}>
       <div className={styles.widthLimit}>
         <Header />
-        <PageTitle number="02" text="MEET YOUR CREW" />
+        <div className={styles.pageContentContainer}>
+          <PageTitle number="02" text="MEET YOUR CREW" />
 
-        <div>
-          <Image width={177.12} height={222} src={crewMember.images.png} />
+          <div>
+            <Image width={177.12} height={222} src={crewMember.images.png} />
+          </div>
+
+          <div className={styles.lineDecoration}></div>
+
+          <ul className={styles.ul}>
+            {crew.map((c) => {
+              return (
+                <Link key={c.name} href={c.relativeURL}>
+                  <li
+                    className={`${styles.navItem} ${styles.li} ${
+                      usePathname().includes(c.relativeURL)
+                        ? styles.active
+                        : styles.notActive
+                    }`}
+                    key={c.relativeURL}
+                  ></li>
+                </Link>
+              );
+            })}
+          </ul>
+
+          <div className={`${bellefair.className} ${styles.role}`}>
+            {crewMember.role.toLocaleUpperCase()}
+          </div>
+          <div className={`${bellefair.className} ${styles.name}`}>
+            {crewMember.name.toUpperCase()}
+          </div>
+          <P>{crewMember.bio}</P>
         </div>
-
-        <div className={styles.lineDecoration}></div>
-
-        <ul className={styles.ul}>
-          {crew.map((c) => {
-            return (
-              <Link href={c.relativeURL}>
-                <li className={styles.li} key={c.relativeURL}></li>
-              </Link>
-            );
-          })}
-        </ul>
-        <div>{crewMember.role}</div>
-        <div>{crewMember.name}</div>
-        <div>{crewMember.bio}</div>
       </div>
     </main>
   );

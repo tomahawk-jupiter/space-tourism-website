@@ -6,12 +6,23 @@ import { usePathname } from "next/navigation";
 
 const navItems = [
   { number: "00", text: "HOME", relativeURL: "/" },
-  { number: "01", text: "DESTINATION", relativeURL: "/destination/Moon" },
-  { number: "02", text: "CREW", relativeURL: "/crew/douglas-hurley" },
+  {
+    number: "01",
+    text: "DESTINATION",
+    relativeURL: "/destination/Moon",
+    route: "destination",
+  },
+  {
+    number: "02",
+    text: "CREW",
+    relativeURL: "/crew/douglas-hurley",
+    route: "crew",
+  },
   {
     number: "03",
     text: "TECHNOLOGY",
     relativeURL: "/technology/launch-vehicle",
+    route: "technology",
   },
 ];
 
@@ -26,7 +37,7 @@ const NormalNavbar = () => {
               <li
                 key={item.text}
                 className={`${styles.navItem} ${
-                  usePathname() === item.relativeURL
+                  usePathname().includes(item.route)
                     ? styles.active
                     : styles.notActive
                 }`}

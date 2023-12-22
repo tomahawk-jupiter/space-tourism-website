@@ -14,3 +14,7 @@ Breakpoints: Desktop over 1024px, Tablet over 375px. Mobile 375px and under.
 @media screen and (max-width: 375px) {
 }
 ```
+
+Mobile: 375 by 667
+Tablet: 768 by 1024
+Desktop: 1440 by 900

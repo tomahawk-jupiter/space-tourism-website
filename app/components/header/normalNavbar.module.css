@@ -61,7 +61,7 @@
     padding: 0 8em;
   }
   .navItemNumber {
-    display: inline-block;
+    display: inline;
   }
   .navItemNumber {
     font-size: 14px;
