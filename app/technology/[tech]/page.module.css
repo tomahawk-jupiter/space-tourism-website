@@ -11,6 +11,46 @@
   margin: 0 auto;
 }
 
+/* Navigation */
+.ul {
+  display: flex;
+  justify-content: space-between;
+  width: 152px;
+  margin: 2rem auto 1rem;
+}
+.li {
+  border-radius: 50%;
+  border: 1px solid #ffffff55;
+  width: 40px;
+  height: 40px;
+  background-color: var(--dark-blue);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notActive {
+}
+.active {
+  background-color: white;
+  color: black;
+}
+
+.textContentContainer {
+  padding: 1rem;
+}
+
+.techTerminology {
+  font-size: 14px;
+  letter-spacing: 2.36px;
+  color: var(--pale-blue);
+  margin-bottom: 1em;
+}
+
+.techName {
+  font-size: 24px;
+}
+
 @media screen and (min-width: 768px) {
   .techImage {
     width: 515px;
@@ -20,6 +60,9 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .widthLimit {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 376px) and (max-width: 1024px) {

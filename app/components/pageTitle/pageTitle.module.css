@@ -2,12 +2,13 @@
   display: flex;
   justify-content: center;
   letter-spacing: 2.7px;
-  margin-bottom: 2rem;
+  margin: 1rem 0 2rem;
 }
 
 .titleNumber {
   font-weight: bold;
   margin-right: 1em;
+  color: #fff5;
 }
 
 @media screen and (min-width: 1025px) {

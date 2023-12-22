@@ -7,6 +7,7 @@ import P from "@/app/components/typography/P";
 import PlanetStat from "./components/PlanetStat";
 import Link from "next/link";
 import PlanetNavbar from "./components/PlanetNavbar";
+import { bellefair } from "@/app/fonts";
 
 const destinations = [
   {
@@ -62,25 +63,32 @@ const Destinations = ({ params }) => {
     <main className={styles.page}>
       <div className={styles.widthLimit}>
         <Header />
-        <PageTitle number="01" text="PICK YOUR DESTINATION" />
-        <div className={styles.planetImageContainer}>
-          <Image
-            className={styles.planetImage}
-            width={170}
-            height={170}
-            src={destination.images.png}
+        <div className={styles.pageContentContainer}>
+          <PageTitle number="01" text="PICK YOUR DESTINATION" />
+          <div className={styles.planetImageContainer}>
+            <Image
+              className={styles.planetImage}
+              width={170}
+              height={170}
+              src={destination.images.png}
+            />
+          </div>
+
+          <PlanetNavbar />
+
+          <h2 className={`${bellefair.className} ${styles.planetName}`}>
+            {destination.name.toLocaleUpperCase()}
+          </h2>
+          <P>{destination.description}</P>
+
+          <div className={styles.lineDecoration}></div>
+
+          <PlanetStat label="AVG. DISTANCE" value={destination.distance} />
+          <PlanetStat
+            label="EST. TRAVEL TIME"
+            value={destination.travel.toUpperCase()}
           />
         </div>
-
-        <PlanetNavbar />
-
-        <H1>{destination.name.toLocaleUpperCase()}</H1>
-        <P>{destination.description}</P>
-
-        <div className={styles.lineDecoration}></div>
-
-        <PlanetStat label="AVG. DISTANCE" value={destination.distance} />
-        <PlanetStat label="EST. TRAVEL TIME" value={destination.travel} />
       </div>
     </main>
   );

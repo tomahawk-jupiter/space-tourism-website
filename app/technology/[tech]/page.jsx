@@ -5,6 +5,9 @@ import PageTitle from "@/app/components/pageTitle/PageTitle";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { barlowCondensed, bellefair } from "@/app/fonts";
+import P from "@/app/components/typography/P";
 
 const technology = [
   {
@@ -46,16 +49,13 @@ const Technology = ({ params }) => {
   useEffect(() => {
     const handleResize = () => {
       console.log({ window: window.innerWidth });
-      setIsMobile(window.innerWidth <= 768); // Adjust the threshold as needed
+      setIsMobile(window.innerWidth <= 768);
     };
 
-    // Initial check on mount
     handleResize();
 
-    // Listen for window resize events
     window.addEventListener("resize", handleResize);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -86,19 +86,35 @@ const Technology = ({ params }) => {
           />
         )}
 
-        <ul>
+        <ul className={styles.ul}>
           {technology.map((tech, index) => {
             return (
-              <li key={tech.relativeURL}>
-                <Link href={tech.relativeURL}>{index}</Link>
-              </li>
+              <Link key={tech.relativeURL} href={tech.relativeURL}>
+                <li
+                  className={`${bellefair.className} ${styles.li} ${
+                    usePathname().includes(tech.relativeURL)
+                      ? styles.active
+                      : styles.notActive
+                  }`}
+                >
+                  {index + 1}
+                </li>
+              </Link>
             );
           })}
         </ul>
 
-        <div>THE TERMINOLOGY...</div>
-        <div>{tech.name}</div>
-        <div>{tech.description}</div>
+        <div className={styles.textContentContainer}>
+          <div
+            className={`${barlowCondensed.className} ${styles.techTerminology}`}
+          >
+            THE TERMINOLOGY...
+          </div>
+          <div className={`${bellefair.className} ${styles.techName}`}>
+            {tech.name.toUpperCase()}
+          </div>
+          <P>{tech.description}</P>
+        </div>
       </div>
     </main>
   );

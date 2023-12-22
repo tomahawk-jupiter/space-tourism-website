@@ -11,6 +11,10 @@
   margin: 0 auto;
 }
 
+.pageContentContainer {
+  padding: 0 2rem;
+}
+
 .planetImageContainer {
   display: flex;
   justify-content: center;
@@ -22,10 +26,16 @@
   height: 170px;
 }
 
+.planetName {
+  font-size: 56px;
+  margin-top: 1rem;
+}
+
 .lineDecoration {
-  height: 1px;
-  background-color: #ffffff88;
+  height: 2px;
   width: 100%;
+  background-color: #383b4b7a;
+  margin: 2rem 0;
 }
 @media screen and (min-width: 1025px) {
   .pageContent {
