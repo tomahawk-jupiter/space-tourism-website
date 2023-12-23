@@ -38,7 +38,7 @@ const HamburgerNavbar = () => {
               <img
                 className={styles.closeIcon}
                 src="/assets/shared/icon-close.svg"
-                alt=""
+                alt="close icon"
               />
             </button>
           </div>

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-  { number: "00", text: "HOME", relativeURL: "/" },
+  { number: "00", text: "HOME", relativeURL: "/", route: "home" },
   {
     number: "01",
     text: "DESTINATION",
@@ -37,7 +37,9 @@ const NormalNavbar = () => {
               <li
                 key={item.text}
                 className={`${styles.navItem} ${
-                  usePathname().includes(item.route)
+                  item.route === "home" && usePathname() === "/"
+                    ? styles.active
+                    : usePathname().includes(item.route)
                     ? styles.active
                     : styles.notActive
                 }`}

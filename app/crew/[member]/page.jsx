@@ -63,36 +63,50 @@ const Crew = ({ params }) => {
         <div className={styles.pageContentContainer}>
           <PageTitle number="02" text="MEET YOUR CREW" />
 
-          <div>
-            <Image width={177.12} height={222} src={crewMember.images.png} />
-          </div>
+          <div className={styles.pageContentBelowTitle}>
+            <div className={styles.imageContainer}>
+              <Image
+                width={500}
+                height={700}
+                src={crewMember.images.png}
+                alt={crewMember.name}
+                className={styles.crewImage}
+              />
+            </div>
 
-          <div className={styles.lineDecoration}></div>
+            <div className={styles.lineDecoration}></div>
 
-          <ul className={styles.ul}>
-            {crew.map((c) => {
-              return (
-                <Link key={c.name} href={c.relativeURL}>
-                  <li
-                    className={`${styles.navItem} ${styles.li} ${
-                      usePathname().includes(c.relativeURL)
-                        ? styles.active
-                        : styles.notActive
-                    }`}
-                    key={c.relativeURL}
-                  ></li>
-                </Link>
-              );
-            })}
-          </ul>
+            <div className={styles.dotsAndTextContainer}>
+              <ul className={styles.ul}>
+                {crew.map((c) => {
+                  return (
+                    <Link key={c.name} href={c.relativeURL}>
+                      <li
+                        className={`${styles.navItem} ${styles.li} ${
+                          usePathname().includes(c.relativeURL)
+                            ? styles.active
+                            : styles.notActive
+                        }`}
+                        key={c.relativeURL}
+                      ></li>
+                    </Link>
+                  );
+                })}
+              </ul>
 
-          <div className={`${bellefair.className} ${styles.role}`}>
-            {crewMember.role.toLocaleUpperCase()}
+              <div className={styles.textContentContainer}>
+                <div className={`${bellefair.className} ${styles.role}`}>
+                  {crewMember.role.toLocaleUpperCase()}
+                </div>
+                <div className={`${bellefair.className} ${styles.name}`}>
+                  {crewMember.name.toUpperCase()}
+                </div>
+                <div className={styles.paragraphWrapper}>
+                  <P>{crewMember.bio}</P>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className={`${bellefair.className} ${styles.name}`}>
-            {crewMember.name.toUpperCase()}
-          </div>
-          <P>{crewMember.bio}</P>
         </div>
       </div>
     </main>

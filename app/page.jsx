@@ -1,10 +1,7 @@
 import styles from "./page.module.css";
 import BigButton from "./components/button/BigButton";
-// import Image from "next/image";
 import Header from "./components/header/Header";
 import { barlowCondensed, bellefair } from "./fonts";
-import H5 from "./components/typography/H5";
-import H1 from "./components/typography/H1";
 import P from "./components/typography/P";
 
 export default function Home() {

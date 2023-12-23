@@ -51,8 +51,88 @@
   font-size: 24px;
 }
 
-/* Another possible breakpoint: 768 */
-@media screen and (min-width: 1025px) {
+.crewImage {
+  width: 177px;
+  height: 222px;
+}
+
+@media screen and (min-width: 700px) {
+  .lineDecoration {
+    display: none;
+  }
+  .ul {
+    z-index: 1;
+  }
+  .li {
+    width: 15px;
+    height: 15px;
+  }
+  .pageContentBelowTitle {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .dotsAndTextContainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .crewImage {
+    height: 572px;
+    width: auto;
+  }
+  .imageContainer {
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .dotsAndTextContainer {
+    max-width: 458px;
+    margin: 0 auto;
+  }
+}
+
+/* @media screen and (min-width: 1124px) { */
+@media screen and (min-width: 1024px) {
+  .pageContentContainer {
+    padding-left: 9rem;
+  }
+  .imageContainer {
+    position: static;
+    bottom: initial;
+    margin: 0;
+    left: initial;
+    transform: initial;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .pageContentBelowTitle {
+    flex-direction: row-reverse;
+  }
+  .crewImage {
+    height: 712px;
+    width: auto;
+    margin-top: -10rem;
+  }
+  .dotsAndTextContainer {
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .role {
+    font-size: 32px;
+  }
+  .name {
+    font-size: 56px;
+  }
+  .ul {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .paragraphWrapper {
+    max-width: 444px;
+  }
 }
 
 @media screen and (max-width: 1024px) {

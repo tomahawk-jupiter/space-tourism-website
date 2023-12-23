@@ -2,10 +2,8 @@ import Header from "@/app/components/header/Header";
 import styles from "./page.module.css";
 import PageTitle from "@/app/components/pageTitle/PageTitle";
 import Image from "next/image";
-import H1 from "@/app/components/typography/H1";
 import P from "@/app/components/typography/P";
 import PlanetStat from "./components/PlanetStat";
-import Link from "next/link";
 import PlanetNavbar from "./components/PlanetNavbar";
 import { bellefair } from "@/app/fonts";
 
@@ -71,6 +69,7 @@ const Destinations = ({ params }) => {
               width={170}
               height={170}
               src={destination.images.png}
+              alt={destination.name}
             />
           </div>
 

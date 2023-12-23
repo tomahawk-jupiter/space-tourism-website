@@ -12,7 +12,6 @@ const navItems = [
 ];
 
 const PlanetNavbar = () => {
-  console.log({ pathname: usePathname() });
   return (
     <nav>
       <ul className={styles.ul}>
@@ -20,23 +19,14 @@ const PlanetNavbar = () => {
           return (
             <li
               key={item.text}
-              className={`${styles.navItem} ${
+              className={`${barlowCondensed.className} ${styles.navItem} ${
                 usePathname() === item.relativeURL
                   ? styles.active
                   : styles.notActive
               }`}
             >
               <Link href={item.relativeURL}>
-                <span
-                  className={`${barlowCondensed.className} ${styles.navItemNumber}`}
-                >
-                  {item.number}
-                </span>
-                <span
-                  className={`${barlowCondensed.className} ${styles.navItemText}`}
-                >
-                  {item.text}
-                </span>
+                <span className={`${styles.navItemText}`}>{item.text}</span>
               </Link>
             </li>
           );

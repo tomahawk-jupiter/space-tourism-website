@@ -30,52 +30,18 @@
   .titleContainer {
     justify-content: flex-start;
     margin-left: 2rem;
+    margin-top: 0;
   }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   .titleContainer {
-  }
-
-  .titleNumber {
-  }
-
-  .titleText {
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .titleContainer {
-  }
-
-  .titleNumber {
-  }
-
-  .titleText {
-  }
-}
-
-@media screen and (min-width: 376px) and (max-width: 700px) {
-  /* .titleContainer {
-    justify-content: flex-start;
-    margin-left: 2rem;
-  } */
-
-  .titleNumber {
-  }
-
-  .titleText {
+    margin-left: 0;
   }
 }
 
 @media screen and (max-width: 375px) {
   .titleContainer {
     font-size: 16px;
-  }
-
-  .titleNumber {
-  }
-
-  .titleText {
   }
 }

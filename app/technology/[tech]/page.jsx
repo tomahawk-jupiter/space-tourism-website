@@ -48,7 +48,6 @@ const Technology = ({ params }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      console.log({ window: window.innerWidth });
       setIsMobile(window.innerWidth <= 768);
     };
 

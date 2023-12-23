@@ -22,7 +22,8 @@ Users should be able to:
 
 ## Screenshot
 
-![](./screenshot.jpg)
+![](./public/screenshot-desktop.png)
+![](./public/screenshot-mobile.png)
 
 ## Built with
 
@@ -32,6 +33,8 @@ Users should be able to:
 ## What I Learnt
 
 Using dynamic routes in Nextjs.
+
+This challenge involved quite a bit of responsive design.
 
 ## Author
 
