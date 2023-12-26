@@ -32,9 +32,9 @@ Users should be able to:
 
 ## What I Learnt
 
-Using dynamic routes in Nextjs.
+Using dynamic routes in Nextjs, ie. use the same page component and but change the content based on the route eg. `/destination/Moon`, `/destination/Mars` etc.
 
-This challenge involved quite a bit of responsive design.
+This challenge involved quite a bit of responsive design. I learnt that you can change the order of flex items with the `order` property ie. `order: 1;`. This was useful because in the designs, elements swap positions depending on screen size. An alternate way to do this would have been using css grid.
 
 ## Author
 

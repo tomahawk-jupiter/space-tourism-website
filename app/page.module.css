@@ -37,8 +37,8 @@
   .pageContent {
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
-    margin-top: 100px;
+    align-items: flex-start;
+    margin-top: 150px;
     padding: 4rem 0;
   }
 

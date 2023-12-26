@@ -25,12 +25,6 @@
   background-color: #ffffff0a;
 }
 
-@media screen and (min-width: 1025px) {
-  .bigButtonOuter {
-    align-items: flex-end;
-  }
-}
-
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .bigButton {
     width: 242px;
@@ -57,5 +51,11 @@
 
   .h4 {
     font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bigButtonOuter {
+    margin-top: 3rem;
   }
 }

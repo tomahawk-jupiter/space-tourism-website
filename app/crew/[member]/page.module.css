@@ -33,6 +33,9 @@
   background-color: #ffffff44;
   border-radius: 50%;
 }
+.li:hover {
+  background-color: #ffffff77;
+}
 .active {
   background-color: white;
 }
