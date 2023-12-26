@@ -58,9 +58,15 @@
   .pageContent {
     margin-top: 8rem;
   }
+  .page {
+    background-image: url("/assets/home/background-home-tablet.jpg");
+  }
+  .h1 {
+    font-size: 150px;
+  }
 }
 
-@media screen and (min-width: 376px) and (max-width: 767px) {
+@media screen and (min-width: 556px) and (max-width: 767px) {
   .page {
     background-image: url("/assets/home/background-home-tablet.jpg");
   }
@@ -68,10 +74,10 @@
     margin-top: 6rem;
   }
   .leftContent {
-    width: 327px;
+    /* width: 327px; */
   }
   .h1 {
-    font-size: 80px;
+    font-size: 150px;
   }
   .h5 {
     font-size: 16px;
@@ -79,7 +85,7 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 556px) {
   .page {
     background-image: url("/assets/home/background-home-mobile.jpg");
   }
