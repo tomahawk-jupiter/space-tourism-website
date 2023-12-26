@@ -22,6 +22,9 @@
   border-bottom: solid white;
 }
 
+.link {
+  padding: 38px 0;
+}
 .notActive:hover {
   border-bottom: solid #fff8;
 }

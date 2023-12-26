@@ -44,7 +44,7 @@ const NormalNavbar = () => {
                     : styles.notActive
                 }`}
               >
-                <Link href={item.relativeURL}>
+                <Link className={styles.link} href={item.relativeURL}>
                   <span
                     className={`${barlowCondensed.className} ${styles.navItemNumber}`}
                   >
