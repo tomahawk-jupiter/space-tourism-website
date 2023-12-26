@@ -48,7 +48,8 @@ const Technology = ({ params }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      console.log({ window: window.innerWidth });
+      setIsMobile(window.innerWidth < 769);
     };
 
     handleResize();
@@ -65,54 +66,62 @@ const Technology = ({ params }) => {
       <div className={styles.widthLimit}>
         <Header />
 
-        <PageTitle number="03" text="SPACE LAUNCH 101" />
+        <div className={styles.pageContentUnderHeader}>
+          <PageTitle number="03" text="SPACE LAUNCH 101" />
 
-        {isMobile ? (
-          <Image
-            className={styles.techImage}
-            src={isMobile ? tech.images.landscape : tech.images.portrait}
-            width={768}
-            height={310}
-            alt={tech.name}
-          />
-        ) : (
-          <Image
-            className={styles.techImage}
-            src={tech.images.portrait}
-            width={768}
-            height={310}
-            alt={tech.name}
-          />
-        )}
+          <div className={styles.pageContentContainer}>
+            {isMobile ? (
+              <Image
+                className={styles.techImage}
+                src={isMobile ? tech.images.landscape : tech.images.portrait}
+                width={768}
+                height={310}
+                alt={tech.name}
+              />
+            ) : (
+              <Image
+                className={styles.techImage}
+                src={tech.images.portrait}
+                width={515}
+                height={527}
+                alt={tech.name}
+              />
+            )}
 
-        <ul className={styles.ul}>
-          {technology.map((tech, index) => {
-            return (
-              <Link key={tech.relativeURL} href={tech.relativeURL}>
-                <li
-                  className={`${bellefair.className} ${styles.li} ${
-                    usePathname().includes(tech.relativeURL)
-                      ? styles.active
-                      : styles.notActive
-                  }`}
+            <div className={styles.circlesAndTextContainer}>
+              <ul className={styles.ul}>
+                {technology.map((tech, index) => {
+                  return (
+                    <Link key={tech.relativeURL} href={tech.relativeURL}>
+                      <li
+                        className={`${bellefair.className} ${styles.li} ${
+                          usePathname().includes(tech.relativeURL)
+                            ? styles.active
+                            : styles.notActive
+                        }`}
+                      >
+                        {index + 1}
+                      </li>
+                    </Link>
+                  );
+                })}
+              </ul>
+
+              <div className={styles.textContentContainer}>
+                <div
+                  className={`${barlowCondensed.className} ${styles.techTerminology}`}
                 >
-                  {index + 1}
-                </li>
-              </Link>
-            );
-          })}
-        </ul>
-
-        <div className={styles.textContentContainer}>
-          <div
-            className={`${barlowCondensed.className} ${styles.techTerminology}`}
-          >
-            THE TERMINOLOGY...
+                  THE TERMINOLOGY...
+                </div>
+                <div className={`${bellefair.className} ${styles.techName}`}>
+                  {tech.name.toUpperCase()}
+                </div>
+                <div className={styles.paragraphContainer}>
+                  <P>{tech.description}</P>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className={`${bellefair.className} ${styles.techName}`}>
-            {tech.name.toUpperCase()}
-          </div>
-          <P>{tech.description}</P>
         </div>
       </div>
     </main>

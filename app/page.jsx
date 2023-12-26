@@ -3,6 +3,7 @@ import BigButton from "./components/button/BigButton";
 import Header from "./components/header/Header";
 import { barlowCondensed, bellefair } from "./fonts";
 import P from "./components/typography/P";
+import Logo from "./components/header/Logo";
 
 export default function Home() {
   return (

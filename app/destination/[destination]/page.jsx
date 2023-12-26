@@ -61,34 +61,39 @@ const Destinations = ({ params }) => {
     <main className={styles.page}>
       <div className={styles.widthLimit}>
         <Header />
-        <PageTitle number="01" text="PICK YOUR DESTINATION" />
-        <div className={styles.pageContentContainer}>
-          <div className={styles.planetImageContainer}>
-            <Image
-              className={styles.planetImage}
-              width={170}
-              height={170}
-              src={destination.images.png}
-              alt={destination.name}
-            />
-          </div>
-
-          <div className={styles.rightContentContainer}>
-            <PlanetNavbar />
-
-            <h2 className={`${bellefair.className} ${styles.planetName}`}>
-              {destination.name.toLocaleUpperCase()}
-            </h2>
-            <P>{destination.description}</P>
-
-            <div className={styles.lineDecoration}></div>
-
-            <div className={styles.planetStatsContainer}>
-              <PlanetStat label="AVG. DISTANCE" value={destination.distance} />
-              <PlanetStat
-                label="EST. TRAVEL TIME"
-                value={destination.travel.toUpperCase()}
+        <div className={styles.pageContentWithTitle}>
+          <PageTitle number="01" text="PICK YOUR DESTINATION" />
+          <div className={styles.pageContentContainer}>
+            <div className={styles.planetImageContainer}>
+              <Image
+                className={styles.planetImage}
+                width={170}
+                height={170}
+                src={destination.images.png}
+                alt={destination.name}
               />
+            </div>
+
+            <div className={styles.rightContentContainer}>
+              <PlanetNavbar />
+
+              <h2 className={`${bellefair.className} ${styles.planetName}`}>
+                {destination.name.toLocaleUpperCase()}
+              </h2>
+              <P>{destination.description}</P>
+
+              <div className={styles.lineDecoration}></div>
+
+              <div className={styles.planetStatsContainer}>
+                <PlanetStat
+                  label="AVG. DISTANCE"
+                  value={destination.distance}
+                />
+                <PlanetStat
+                  label="EST. TRAVEL TIME"
+                  value={destination.travel.toUpperCase()}
+                />
+              </div>
             </div>
           </div>
         </div>

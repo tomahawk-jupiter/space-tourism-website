@@ -62,6 +62,9 @@
 }
 
 @media screen and (min-width: 1025px) {
+  .pageContentWithTitle {
+    padding-left: 9rem;
+  }
   .pageContentContainer {
     display: flex;
     justify-content: space-around;
